@@ -3,19 +3,30 @@
 
 .header_main-container {
 	background: $background-color;
-	background: $background-gradient;
-	border-bottom: 0.2em solid $primary-color;
+	/*background: $background-gradient;*/
+	border-bottom: 0.2em solid $netflix-brand-red;
 	color: $text-color;
-	display: grid;
-	grid-template-areas: 'welcome-text title logoff';
-	grid-template-columns: 1fr 1fr 1fr;
-	height: 120px;
+	display: flex;
+	font-family: $main-font;
+  font-weight: 300;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 100px;
+}
+
+.header_button {
+	height: 5vh;
+	font-family: $main-font;
+  font-weight: 300;
+}
+
+.header_button:hover {
+	border-bottom: 4px solid #e50914;
 }
 
 .header_welcome-text {
 	font-family: $main-font;
 	font-size: 1em;
-	grid-area: welcome-text;
 	margin: 0.3em 0.75em;
 }
 
@@ -26,23 +37,27 @@
 .header_main-link {
 	@include box-shadow(0 0 0 0, 0 0 1em 0);
 	align-self: center;
-	border-left: .07em solid $primary-color;
+	border-left: .07em solid none;
 	border-radius: 1em;
-	border-right: .07em solid $primary-color;
+	border-right: .07em solid none;
 	color: $text-color;
 	font-family: $title-font;
 	font-size: 3rem;
 	font-weight: 700;
-	grid-area: title;
 	justify-self: center;
-	padding: 0.25em 0.8em;
 	text-decoration: none;
 }
 
 .header_log-button {
 	@include button-style;
-	grid-area: logoff;
 	justify-self: end;
 	margin: 2em;
+	font-size: .8rem;
 	text-decoration: none;
+	width: 45px;
+  height: 20px;
+}
+
+.netflix_logo {
+	width: 16vw;
 }
