@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions';
 import PropTypes from 'prop-types';
 import netflix from '../../Assets/Netflix.png';
+import bell from '../../Assets/Bell.svg';
 
 export const Header = (props) => {
   let avgRating = props.ratings.reduce((acc, rating) => {
@@ -17,7 +18,7 @@ export const Header = (props) => {
       </Link>
       <h3 className="header_button">Search</h3>
       <h3 className="header_button">Kids</h3>
-      <h3 className="header_button">Bell</h3>
+      <img className="netflix_logo" src={bell}/>
       {!props.user
       ? null
       : <article className="header_welcome-text">
