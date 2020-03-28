@@ -63,7 +63,7 @@ export class Login extends Component {
         />
         <p className='login-form__error'>{this.props.error}</p>
         <button className='login-form__button' onClick={() => this.handleClick()}>Login</button>
-        {this.props.user ? <Redirect to='/' /> : null}
+        {this.props.user ? <Redirect to='/movie' /> : null}
     </div>)
   }
 }
