@@ -2,12 +2,13 @@
 @import '../../styles/variables.scss';
 
 .movie-card {
-  @include box-shadow(0 0 0.75em 0, 0 0 2.5em 0);
+/*  @include box-shadow(0 0 0.75em 0, 0 0 2.5em 0);
   border-radius: 1em;
-  background-color: $card-background;
-  width: 15em;
-  padding: 1.5em;
-  margin: 2em;
+  background-color: $card-background;*/
+  border: 1px solid yellow;
+  width: 22%;
+  /*padding: 1.5em;*/
+  margin: .5em;
   display: grid;
   opacity: 80%;
   text-decoration: none;
@@ -21,8 +22,8 @@
 .poster-img {
   width: 100%;
   height: auto;
-  border-radius: 0.5em;
-  box-shadow: $black-box-shadow
+  /*border-radius: 0.5em;*/
+  box-shadow: $black-box-shadow;
 }
 
 .movie-card-title {
