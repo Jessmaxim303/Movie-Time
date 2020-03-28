@@ -44,8 +44,8 @@ export class App extends Component {
         <div className='content'>
           <Switch>
             <Route
-              path='/login'
-              render={() => <Login />}
+              path='/movie'
+              render={() => <MovieContainer />}
             />
             <Route
               path='/movies/:id'
@@ -53,7 +53,7 @@ export class App extends Component {
                   {this.props.movies.find(movie => movie.id === parseInt(match.params.id))}/>}/>
             <Route
               path='/'
-              render={()=>< MovieContainer />} />
+              render={()=><Login />} />
           </Switch>
         </div>
       </main>
