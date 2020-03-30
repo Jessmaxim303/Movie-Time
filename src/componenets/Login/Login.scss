@@ -3,15 +3,13 @@
 
 .login-form {
   @include display-flex (column nowrap, center, center);
-  border: 0.25em $primary-color solid;
   flex: 0.5;
+  flex-direction: row;
   justify-self: center;
   align-self: center;
-  border-radius: 1em;
-  background-color: $card-background;
-  padding: 1.5em;
-  margin: 2em;
-  width: 30%;
+  margin: 12em auto;
+  width: 60%;
+  color: #f1f1f1;
   &__email,
   &__password {
     font-family: $main-font;
@@ -30,4 +28,21 @@
   &__error {
     color: red;
     }
+}
+
+.login-form-welcome {
+  font-size: 5vh;
+  line-height: 8vh;
+  width: 50%;
+}
+
+.login-form-inputs {
+  background-color: $card-background;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.netflix_logo-login {
+  width: 14vw;
 }

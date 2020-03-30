@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.scss';
-import MovieContainer from '../../containers/MovieContainer/MovieContainer.js'
-import Login from '../Login/Login'
+import MovieContainer from '../../containers/MovieContainer/MovieContainer.js';
+import Login from '../Login/Login';
 import MovieDetail from '../MovieDetail/MovieDetail.js';
 import Header from '../Header/Header.js';
 import { fetchMoviesAPI } from '../../apiCalls/apiCalls.js';
 import { loadingMovies, getMovies } from '../../actions';
 import { Loading } from '../Loading/Loading.js';
 import PropTypes from 'prop-types';
+import Background from '../../Assets/login-backdrop.jpg';
 
 export class App extends Component {
   constructor() {
@@ -30,6 +31,10 @@ export class App extends Component {
   }
 
   render() {
+    const backgroundStyling = {
+      background: `linear-gradient(to top, rgba(42, 42, 42, .75), rgba(42, 42, 42, 0)), url(${Background}) no-repeat center top`,
+      backgroundSize: 'cover',
+    }
     if (this.props.loadingStatus) {
       return (
       <main className='main'>
@@ -39,9 +44,9 @@ export class App extends Component {
       )
     }
     return (
-      <main className='main'>
-        <Header />
-        <div className='content'>
+      <main className='main' >
+        
+        <div className='content' style={backgroundStyling}>
           <Switch>
             <Route
               path='/movie'

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { MovieCard } from '../../componenets/MovieCard/MovieCard.js'
+import { MovieCard } from '../../componenets/MovieCard/MovieCard.js';
+import Header from '../../componenets/Header/Header.js';
 import { connect } from 'react-redux';
 import './MovieContainer.scss';
 import PropTypes from 'prop-types';
@@ -20,6 +21,7 @@ export class MovieContainer extends Component {
 
     return (
       <section className='movie-container'>
+        <Header />
         {movieCards}
       </section>
     )
