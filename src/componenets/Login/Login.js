@@ -3,6 +3,7 @@ import { userSignIn, fetchRatingsAPI } from '../../apiCalls/apiCalls'
 import { connect } from 'react-redux';
 import { addUser, errorMsg, getRatings } from '../../actions';
 import { Redirect } from 'react-router-dom';
+import netflix from '../../Assets/Netflix.png';
 import './Login.scss';
 import PropTypes from 'prop-types';
 
@@ -45,28 +46,35 @@ export class Login extends Component {
     const { email, password } = this.state
     return (
       <div className='login-form'>
-        <input
-          className='login-form__email'
-          type="text"
-          placeholder="Email..."
-          name="email"
-          value={email}
-          onChange={this.handleChange}
-        />
-        <input
-          className='login-form__password'
-          type="password"
-          placeholder="Password..."
-          name="password"
-          value={password}
-          onChange={this.handleChange}
-        />
-        <p className='login-form__error'>{this.props.error}</p>
-        <button className='login-form__button' onClick={() => this.handleClick()}>Login</button>
-        {this.props.user ? <Redirect to='/movie' /> : null}
-    </div>)
+        <section className="login-form-welcome">
+          <h1 className='login-welcome-text'>WATCH<br />TV SHOWS &<br />MOVIES<br />ANYWHERE.<br />ANYTIME.</h1>
+        </section>
+        <section className='login-form-inputs'>
+          <img className="netflix_logo-login" src={netflix}/>
+          <h1 className='login-form-title'>Sign In</h1>
+          <input
+            className='login-form__email'
+            type="text"
+            placeholder="Email..."
+            name="email"
+            value={email}
+            onChange={this.handleChange}
+          />
+          <input
+            className='login-form__password'
+            type="password"
+            placeholder="Password..."
+            name="password"
+            value={password}
+            onChange={this.handleChange}
+          />
+          <p className='login-form__error'>{this.props.error}</p>
+          <button className='login-form__button' onClick={() => this.handleClick()}>Login</button>
+          {this.props.user ? <Redirect to='/movie' /> : null}
+        </section>
+      </div>)
+    }
   }
-}
 
 export const mapStateToProps = state => ({
   error: state.error,
