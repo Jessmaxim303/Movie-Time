@@ -14,12 +14,13 @@
   &__password {
     font-family: $main-font;
     font-size: 1.5em;
-    margin: 1em 0 0.75em;
+    width: 85%;
+    margin: 1em auto 0.75em;
   }
   &__button{
     @include button-style;
-    margin: 0.25em 0 0.75em;
-    width: 100%;
+    margin: 0.25em auto 0.75em;
+    width: 85%;
     &:hover {
       transform: none;
       background-color: darken($primary-color, 10);
@@ -38,6 +39,8 @@
 
 .login-form-inputs {
   background-color: $card-background;
+  /*opacity: 0.5;*/
+  padding: 10px;
   display: flex;
   flex-direction: column;
   width: 50%;
