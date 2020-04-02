@@ -6,6 +6,12 @@ import './MovieContainer.scss';
 import PropTypes from 'prop-types';
 
 export class MovieContainer extends Component {
+  constructor() {
+    super()
+    this.state = {
+      isHovered: false
+    }
+  }
 
   render() {
     let movieCards = this.props.movies.map(movie => {
@@ -18,11 +24,10 @@ export class MovieContainer extends Component {
         userRating={this.props.ratings.find(rating => movie.id === rating.movie_id)}
       />
     })
-
     return (
-      <section className='movie-container'>
+      <section className="moviecard-container">
         <Header />
-        {movieCards}
+          {movieCards}
       </section>
     )
   }
