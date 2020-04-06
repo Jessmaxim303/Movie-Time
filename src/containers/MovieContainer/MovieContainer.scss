@@ -6,8 +6,8 @@
   flex-wrap: wrap;
   @include display-flex (row, center, center);
   /*background: rgb(18,66,25);*/
-  /*background: radial-gradient(circle, rgba(229,9,20,1) 0%, rgba(0,0,0,1) 18%);*/
-  flex-wrap: wrap;
+/*  background: radial-gradient(circle, rgba(229,9,20,1) 0%, rgba(0,0,0,1) 18%);
+*/  flex-wrap: wrap;
 }
 
 .moviecard-container {
