@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { postRating, deleteRating, getRatings, getMovies } from '../../actions';
 import { postRatingToApi, deleteRatingFromApi, fetchRatingsAPI, fetchMoviesAPI } from '../../apiCalls/apiCalls';
 import PropTypes from 'prop-types';
+import rating from '../../Assets/rating.svg';
 
 export class MovieDetail extends Component {
   constructor() {
@@ -77,24 +78,21 @@ export class MovieDetail extends Component {
   render() {
     let {title, id, average_rating, poster_path, backdrop_path, release_date, overview} = this.props.selectedMovie
     const backgroundStyling = {
-      background: `linear-gradient(to top, rgba(42, 42, 42, .75), rgba(42, 42, 42, 0)), url(${backdrop_path}) no-repeat center top`,
+      background: `linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0)), url(${backdrop_path}) no-repeat center top`,
       backgroundSize: 'cover',
     }
 
     return (
       <section className='movie-detail' style={backgroundStyling} key={id}>
-        <div className='movie-detail__info' >
-          <img 
-            className='movie-detail__poster' 
-            alt={`movie poster for ${title}`} 
-            src={poster_path} />
+        
           <div className='movie-detail__details'>
             <h2 className='movie-detail__title'>{title}</h2>
             <p className='movie-detail__release-date'>
               {`Release Date: ${release_date}`}
             </p>
             <p className='movie-detail__average-rating'>
-              {`Average Rating: ${average_rating.toFixed(2)}`}
+              <img src={rating}/>
+              {`${average_rating.toFixed(2)}`}
             </p>
           {this.props.user ?
           <>
@@ -114,6 +112,7 @@ export class MovieDetail extends Component {
               id='user-rating' 
               name='currentRating' 
               value={this.state.currentRating} />
+            <img src={rating}/>
             <div className='movie-detail__rating-buttons'>
               <button
                 className='movie-detail__button movie-detail__delete-rating'
@@ -130,7 +129,7 @@ export class MovieDetail extends Component {
           : null}
             <p className='movie-detail__overview'>{overview}</p>
           </div>
-        </div>
+        
       </section>
     )
   }

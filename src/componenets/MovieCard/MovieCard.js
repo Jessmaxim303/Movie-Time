@@ -34,7 +34,7 @@ export class MovieCard extends Component {
                      <h2 className='movie-rating'>{this.props.title}</h2>
                      <div className='movie-rating-box'>
                        <img src={rating}/>
-                       <h2 className='movie-rating'>{`${this.props.averageRating}/10`}</h2>
+                       <h2 className='movie-rating-number'>{`${this.props.averageRating}/10`}</h2>
                      </div>
                      <p className='movie-overview'>{this.props.overview}</p>
                    </section>

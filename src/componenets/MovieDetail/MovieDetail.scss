@@ -2,7 +2,9 @@
 @import '../../styles/variables.scss';
 
 .movie-detail {
-  @include display-flex (row, center, center);
+  color: #f1f1f1;
+  padding-left: 5vw;
+  @include display-flex (row, flex-end, flex-start);
   flex: 1;
   &:first-child {
     flex: 1;
@@ -10,7 +12,7 @@
   &__info {
     @include display-flex (row, center, space-around);
     border-radius: 0.75em;
-    color: $text-color;
+    color: #f1f1f1;
     font-size: 1.25rem;
     margin: 0.5em;
     padding: 0.75em;
@@ -25,15 +27,15 @@
     width: 40%;
   }
   &__details {
-    @include display-flex (column, center, center);
-    width: 45%;
+    @include display-flex (column, center, flex-end);
+    width: 70%;
   }
   &__title {
-    font-family: $title-font;
+    font-family: $main-font;
     font-weight: 900;
     font-size: 2.5rem;
     margin: 0;
-    text-align: center;
+    color: #f1f1f1;
   }
   &__release-date {
     margin: 0.5em 0;
