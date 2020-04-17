@@ -4,6 +4,7 @@
 .movie-detail {
   color: #f1f1f1;
   padding-left: 5vw;
+  height: 90vh;
   @include display-flex (row, flex-end, flex-start);
   flex: 1;
   &:first-child {
@@ -28,7 +29,8 @@
   }
   &__details {
     @include display-flex (column, center, flex-end);
-    width: 70%;
+    width: 45%;
+    margin-bottom: 10vh;
   }
   &__title {
     font-family: $main-font;
@@ -44,7 +46,6 @@
     font-weight: 700;
   }
   &__overview {
-    height: 10em;
     overflow: auto;
     text-align: left;
     width: 100%;
@@ -80,6 +81,34 @@
     animation: flash-rating 2s normal;
     margin: 0;
   }
+  &__buttons {
+    display: block;
+    color: lighten($primary-color, 10);
+    animation: flash-rating 2s normal;
+    margin: 0;
+  }
+}
+
+.movie-detail-button {
+  height: 45px;
+  width: 120px;
+  border-radius: 4px;
+  border: none;
+  margin-right: 15px;
+  color: #f1f1f1;
+}
+
+.watch-now {
+  background: $netflix-brand-red;
+}
+
+.movie-favorite {
+  border: 2px solid #f1f1f1;
+  background: none;
+}
+
+.movie-nav-buttons {
+  
 }
 
 @keyframes flash-rating {

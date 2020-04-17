@@ -2,7 +2,7 @@
 @import '../../styles/mixins.scss';
 
 .header_main-container {
-	/*background: $background-color;*/
+	background: #000;
 	/*background: $background-gradient;*/
 	border-bottom: 0.2em solid $netflix-brand-red;
 	color: $text-color;
@@ -36,7 +36,7 @@
 }
 
 .header_main-link {
-	@include box-shadow(0 0 0 0, 0 0 1em 0);
+	/*@include box-shadow(0 0 0 0, 0 0 1em 0);*/
 	align-self: center;
 	border-left: .07em solid none;
 	border-radius: 1em;
@@ -62,3 +62,20 @@
 .netflix_logo {
 	width: 16vw;
 }
+
+.header_profile-icon {
+	width: 75px;
+	height: 75px;
+	margin: 20% auto;
+}
+
+.selectpicker {
+	border: 1px solid red;
+}
+
+/*<Link to={'/'} className="header_log-profile"
+            onClick={() => props.logout() }>*/
+
+
+
+
