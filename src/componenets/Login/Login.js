@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { userSignIn, fetchRatingsAPI } from '../../apiCalls/apiCalls'
 import { connect } from 'react-redux';
 import { addUser, errorMsg, getRatings } from '../../actions';

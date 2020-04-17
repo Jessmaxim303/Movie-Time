@@ -32,7 +32,7 @@ export class App extends Component {
 
   render() {
     const backgroundStyling = {
-      background: `linear-gradient(to top, rgba(42, 42, 42, .75), rgba(42, 42, 42, 0)), url(${Background}) no-repeat center top`,
+      background: `linear-gradient(to top, rgba(0, 0, 0, .7), rgba(42, 42, 42, 0)), url(${Background}) no-repeat center top`,
       backgroundSize: 'cover',
     }
     if (this.props.loadingStatus) {

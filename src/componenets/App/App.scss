@@ -14,3 +14,152 @@
   @include display-flex (column, default, default);
   flex: 1;
 }
+
+
+
+.Dropdown {
+  cursor: pointer;
+}
+
+.Dropdown-input {
+  font-family: 'Roboto';
+  box-sizing: border-box;
+  border: 1px solid #a6a6a6;
+  background: #f8f8f8;
+  height: 32px;
+  padding: 0 8px;
+  display: inline-block;
+  max-width: 100%;
+  caret-color: transparent;
+  font-size: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 23px;
+}
+
+.Dropdown-input:hover {
+  border: 1px solid #000000;
+}
+
+.Dropdown-input:focus {
+  /* border: 1px solid #0078d4; */
+  outline: none;
+}
+
+.Dropdown-input:invalid {
+  border: 1px solid red;
+  outline: none;
+}
+
+.Dropdown-option {
+  height: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.Dropdown-option:hover {
+  background: #ececec;
+  user-select: none;
+}
+
+@keyframes dropDown {
+  0% {
+    max-height: 0;
+  }
+  1% {
+    max-height: 0;
+  }
+  100% {
+    max-height: inherit;
+  }
+}
+
+.Dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Dropdown-innerContainer {
+  width: 100%;
+}
+
+.Dropdown-label {
+  text-align: left;
+  margin-bottom: 4px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #1d5ab9;
+}
+
+.Dropdown-label.required::after {
+  content: '*';
+  color: red;
+  margin-left: 2px;
+}
+
+.Dropdown-optionsContainer {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  max-height: 160px;
+  overflow: auto;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* .Dropdown-optionsContainer::-webkit-scrollbar {
+  border-radius: 5px;
+  margin-top: 2px;
+  background: transparent;
+  width: 12px;
+}
+
+.Dropdown-optionsContainer::-webkit-scrollbar-button {
+  display: none;
+}
+
+.Dropdown-optionsContainer::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.Dropdown-optionsContainer::-webkit-scrollbar-thumb {
+  background-color: #a6a6a6;
+  border-right: 2px solid #fff;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  border-left: none;
+  position: absolute;
+  top: 0;
+  right: 3px;
+  /* border-radius: 7px; 
+} */
+
+.Dropdown-option {
+  width: 100%;
+}
+
+.dropdownContainer {
+  position: relative;
+}
+
+.iconx {
+  position: absolute;
+  right: 0;
+  margin-top: 4px;
+  margin-right: 3px;
+  opacity: 0.6;
+  transition: all 0.2s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.iconx.open {
+  transform: rotate(180deg);
+  opacity: 0.9;
+}
+
