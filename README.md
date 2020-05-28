@@ -16,14 +16,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - esLint
 - GitHub Projects
 
-### Deployed to Heroku:
-[Heroku](https://rancid-tomatillos-1909.herokuapp.com/)
-
 ## Screenshots 
 ![netflix](https://user-images.githubusercontent.com/45706207/83099951-ef013500-a06b-11ea-9c9c-98099ba61bc5.png)
 ![list](https://user-images.githubusercontent.com/45706207/83100281-c62d6f80-a06c-11ea-89b3-c4cf745f480f.png)
 ![rating](https://user-images.githubusercontent.com/45706207/83100370-0bea3800-a06d-11ea-9762-b91939f7e2f8.png)
 
+## Login
+charlie@turing.io
+## Password
+qwerty
 
 
 
